@@ -44,6 +44,11 @@ class CalenderActivity : AppCompatActivity() {
 
         title.text = "달력 일기장"
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             diaryTextView.visibility = View.VISIBLE
             saveBtn.visibility = View.VISIBLE
@@ -66,6 +71,7 @@ class CalenderActivity : AppCompatActivity() {
             diaryContent.text = str
             diaryContent.visibility = View.VISIBLE
         }
+
     }
 
     // 달력 내용 조회, 수정

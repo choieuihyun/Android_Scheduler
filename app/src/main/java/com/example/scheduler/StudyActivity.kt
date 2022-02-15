@@ -33,6 +33,11 @@ class StudyActivity : AppCompatActivity() {
                 }
             })*/
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         study_button.setOnClickListener {
             var builder = AlertDialog.Builder(this)
             builder.setTitle("공부 얼마나했어")
@@ -51,7 +56,7 @@ class StudyActivity : AppCompatActivity() {
                 intent.putExtra("studyTime", data)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
-
+                finish()
                 /*tv1.text = "${edit1?.text}"
                 tv1.append("${edit2?.text}")*/
 
@@ -63,8 +68,6 @@ class StudyActivity : AppCompatActivity() {
 
             //https://sbe03005dev.tistory.com/entry/Android-Kotlin-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BD%94%ED%8B%80%EB%A6%B0-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-Dialog
         }
-
-
     }
 }
 

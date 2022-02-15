@@ -20,9 +20,6 @@ import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var pref: SharedPreferences
-    lateinit var editor: SharedPreferences.Editor
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_include_drawer)
@@ -91,6 +88,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("sibal","왜안돼")
             val intent = Intent(this, StudyActivity::class.java)
             startActivity(intent)
+
         }
 
         main_navigation_btn2.setOnClickListener {

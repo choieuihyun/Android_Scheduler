@@ -14,13 +14,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.progress.*
+import kotlin.math.roundToInt
 
 class CustomView: View {
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
 
-    var numProgress: Float = 0.0f
+    var numProgress: Float = 0f
 
     // onDraw() 메서드 오버라이드 : VIew가 화면에 출력될 때 호출되는 콜백 메서드
     override fun onDraw(canvas: Canvas?) {
@@ -65,7 +66,7 @@ class ProgressActivity : AppCompatActivity() {
         var tvData = findViewById<TextView>(R.id.textView6)
         pref = getPreferences(Context.MODE_PRIVATE)
         editor = pref.edit()
-        //val customProgress = CustomView(this)
+        //val customProgress = CustomView(this) // 왜 이건 안될까. 말 그대로 커스텀 '뷰'라서 뷰의 id를 받아오고 그 뷰가 담긴 객체인 customProgress로 해야 당연히 되는게 맞나?
         /*val customView = CustomView(this)
         val parentView: ConstraintLayout = findViewById(R.id.progress_activity)
         parentView.addView(customView)*/
@@ -77,19 +78,31 @@ class ProgressActivity : AppCompatActivity() {
         var inputData = pref.getFloat("sumTime", customProgress.numProgress)
         customProgress.numProgress = inputData
 
-        var name:String? = null
+        //var name:String? = intent.hasExtra("studyTime").toString()
 
-        when(name) {
+        /*when(name) {
             "studyTime" -> { intent.hasExtra(name)
                              var time = intent.getStringExtra(name)
                              customProgress.setProgress(time?.toFloat()!! * 3)
                              editor.putFloat("sumTime", inputData + time.toFloat() * 3)
                              editor.apply()
            }
-        }
+            "exerciseTime" -> { intent.hasExtra(name)
+                                var time = intent.getStringExtra(name)
+                                customProgress.setProgress(time?.toFloat()!! * 2)
+                                editor.putFloat("sumTime", inputData + time.toFloat() * 2)
+                                editor.apply()
+            }
+            "hobbyTime" -> { intent.hasExtra(name)
+                             var time = intent.getStringExtra(name)
+                             customProgress.setProgress(time?.toFloat()!!)
+                             editor.putFloat("sumTime", inputData + time.toFloat())
+                             editor.apply()
+            }
+        }*/
 
 
-        /*if (intent.hasExtra("studyTime")) {
+        if (intent.hasExtra("studyTime")) {
             var time = intent.getStringExtra("studyTime")
             if (time != null) {
                 customProgress.setProgress((time.toFloat() * 3)) // 프로그레스바에 입력한 시간값만큼 추가하고
@@ -120,7 +133,7 @@ class ProgressActivity : AppCompatActivity() {
                 ) // sharedpreference에 sumTime(시간) 키값으로 위에서 선언한 inputData에 time값 추가.
                 editor.apply()
             }
-        }*/
+        }
 
         if (inputData >= 360) {
             customProgress.numProgress = (inputData % 360).toFloat()
@@ -130,7 +143,7 @@ class ProgressActivity : AppCompatActivity() {
             editor.apply()
         }
         Log.d("why2", customProgress.numProgress.toString())
-        tvData.setText(customProgress.numProgress.toString() + "/360")
+        tvData.setText(customProgress.numProgress.roundToInt().toString() + "/360") // roundToInt로 소수점 없앰.
 
         /*if (intent.hasExtra("studyTime")) {
             var time = intent.getStringExtra("studyTime")
