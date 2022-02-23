@@ -31,7 +31,7 @@ class CustomView: View {
         val paint = Paint()
         paint.color = Color.GRAY // 색상 설정
         paint.style = Paint.Style.STROKE // 도형 내부 꽉채움
-        paint.strokeWidth = 60f
+        paint.strokeWidth = 80f
 
         // canvas 객체로 도형(원) 그리기
         // 매개변수 : 중심의 x좌표, 주심의 Y좌표, 반지름, paint객체

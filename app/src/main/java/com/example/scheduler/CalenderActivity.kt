@@ -1,5 +1,6 @@
 package com.example.scheduler
 
+import adapter.PagerAdapter
 import android.annotation.SuppressLint
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -31,6 +32,7 @@ class CalenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calender)
+
 
         // UI값 생성
         calendarView=findViewById(R.id.calendarView) // 달력 생성

@@ -3,16 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/calender.xml" value="0.5" />
         <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/dialog.xml" value="0.3442028985507246" />
         <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/exercise.xml" value="0.18" />
         <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/hobby.xml" value="0.2109375" />
         <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/intro.xml" value="0.34148550724637683" />
         <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/logged_in.xml" value="0.3619791666666667" />
-        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/main_include_drawer.xml" value="0.33" />
+        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/main.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/main_include_drawer.xml" value="0.2" />
         <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/progress.xml" value="0.33" />
-        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/study.xml" value="0.22" />
+        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/record.xml" value="0.25" />
+        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/study.xml" value="0.1" />
+        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/layout/task_list.xml" value="0.22" />
+        <entry key="..\:/Users/amamm/AndroidStudioProjects/Scheduler/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

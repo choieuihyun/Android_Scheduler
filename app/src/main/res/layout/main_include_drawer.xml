@@ -12,12 +12,12 @@
     <!--fitsSystemWindows를 true로 지정할 경우
     뷰가 차지할 수 있는 영역을 소프트키, 상태바를 제외한 영역까지 넓혀줍니다.-->
 
-    <include
+<!--    <include
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        layout="@layout/activity_main"/>
+        layout="@layout/activity_main"/>-->
 
-    <com.google.android.material.navigation.NavigationView
+    <!--<com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:orientation="vertical"
         android:background="#6e6e6e"
@@ -67,11 +67,11 @@
                     android:text="공부"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"/>
-                    <!--android:clickable="true"
-                    android:enabled="false" 요거 두줄 잘 기억해놓자.-->
+                    &lt;!&ndash;android:clickable="true"
+                    android:enabled="false" 요거 두줄 잘 기억해놓자.&ndash;&gt;
 
-                <!--android:clickable="true"
-                    android:enabled="false" 요거 두줄 잘 기억해놓자.-->
+                &lt;!&ndash;android:clickable="true"
+                    android:enabled="false" 요거 두줄 잘 기억해놓자.&ndash;&gt;
 
 
                 <Button
@@ -93,8 +93,8 @@
                     android:text="취미"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
-                <!--android:clickable="true"
-                android:enabled="false" 요거 두줄 잘 기억해놓자.-->
+                &lt;!&ndash;android:clickable="true"
+                android:enabled="false" 요거 두줄 잘 기억해놓자.&ndash;&gt;
 
 
                 <Button
@@ -119,5 +119,5 @@
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.navigation.NavigationView>
+    </com.google.android.material.navigation.NavigationView>-->
 </androidx.drawerlayout.widget.DrawerLayout>
