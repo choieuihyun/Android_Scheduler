@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
+import com.example.scheduler.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import fragment.*
 import kotlinx.android.synthetic.main.record.*
@@ -15,6 +16,10 @@ import kotlinx.android.synthetic.main.record.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var context: Context
+    // 뷰 모델 사용해서 데이터 주고받아보자.
+
+    // kotlin-extension 안쓴대. 이유는 기억하거나 검색해보고 뷰 바인딩으로 바꾸자
+    lateinit var binding: ActivityMainBinding
 
     private val fl: FrameLayout by lazy {
         findViewById(R.id.timeLayout)
@@ -22,9 +27,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        //setContentView(R.layout.activity_main)
 
         //supportFragmentManager.beginTransaction().replace(R.id.listView, ListFragment()).commit()
 /*        val items = mutableListOf<ListViewItem>()
@@ -98,5 +103,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun changeFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().replace(R.id.timeLayout, fragment).commit()
+
     }
 }
